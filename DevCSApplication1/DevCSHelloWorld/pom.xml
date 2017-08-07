@@ -71,7 +71,7 @@
                 <configuration>
                     <compositeName>${project.artifactId}</compositeName>
                     <composite>${scac.input}</composite>
-                    <sarLocation>${scac.output.dir}/sca_${project.artifactId}_rev${composite.revision}.jar</sarLocation>
+                    <sarLocation>${scac.output.dir}/sca_${project.artifactId}_rev${composite.revision}-SNAPSHOT.jar</sarLocation>
                     <serverUrl>${serverUrl}</serverUrl>
                     <user>${user}</user>
                     <password>${password}</password>
@@ -86,4 +86,32 @@
             </plugin>
         </plugins>
     </build>
+    <repositories>
+    <repository>
+      <id>HelloWorld_repo</id>
+      <name>HelloWorld Maven Repository</name>
+      <url>https://developer.us2.oraclecloud.com/profile/developer59656-insopra/s/developer59656-insopra_helloworld_19291/maven/</url>
+      <releases>
+        <checksumPolicy>ignore</checksumPolicy>
+      </releases>
+      <snapshots>
+        <checksumPolicy>ignore</checksumPolicy>
+      </snapshots>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>HelloWorld_repo</id>
+      <name>HelloWorld Maven Repository</name>
+      <url>https://developer.us2.oraclecloud.com/profile/developer59656-insopra/s/developer59656-insopra_helloworld_19291/maven/</url>
+      <releases>
+        <checksumPolicy>ignore</checksumPolicy>
+      </releases>
+      <snapshots>
+        <checksumPolicy>ignore</checksumPolicy>
+      </snapshots>
+      <layout>default</layout>
+    </pluginRepository>
+  </pluginRepositories>
 </project>
